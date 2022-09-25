@@ -1,6 +1,6 @@
 # About
 
-A collection of web apps to (partially) automate common legal problems. Built with [PyWebIO](https://github.com/pywebio/PyWebIO) and currently hosted on my personal website [piccolaw.ch](www.piccolaw.ch). Licensed under the the EUPL-1.2 only.
+A collection of web apps to (partially) automate common legal problems. Built with [PyWebIO](https://github.com/pywebio/PyWebIO) and currently hosted on my personal website [piccolaw.ch](www.piccolaw.ch). Licensed under the EUPL-1.2 only.
 
 Currently under development and subject to change.
 
