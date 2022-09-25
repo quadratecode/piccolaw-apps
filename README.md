@@ -6,8 +6,8 @@ Currently under development and subject to change.
 
 # Apps
 
-[x] Employment Law (in beta)
-[] Deadline Calculator (planned)
+- Employment Law (in beta)
+- Deadline Calculator (planned)
 # Get Started
 
 Set up:
