@@ -107,10 +107,11 @@ def check_form_incapacity(data):
                 return ("", "")
             
             # Data is valid
-            data_lst.append(data[s_key])
-            data_lst.append(data[e_key])
+            data_lst.append(arrow.get(data[s_key], "DD.MM.YYYY"))
+            data_lst.append(arrow.get(data[e_key], "DD.MM.YYYY"))
 
-    if sorted(data_lst) != data_lst:
+    data_lst_sorted = sorted(data_lst)
+    if data_lst_sorted != data_lst:
         output.put_error(lang("ERROR: Dates not in chronological order",
                                 "ERROR: Daten nicht in chronologischer Abfolge"),
                             closable=True,
@@ -352,11 +353,11 @@ def emplaw_app():
         onclick=btn_click)
     output.put_markdown(lang("""
         # Web App Employment Law
-        `v1.2.0-beta.3 | made by Roger Meier`
+        `v1.2.0-beta.3 | Last update: 2022-09-28`
         """,
         """
         # Web App Arbeitsrecht
-        `v1.2.0-beta.3 | made by Roger Meier`
+        `v1.2.0-beta.3 | Last update: 2022-09-28`
         """))
 
     # User info: Landing page
@@ -1738,7 +1739,7 @@ def emplaw_app():
     # Scope for the summary of incapacities as declared by user input
     with output.use_scope("scope_res_incap"):
 
-        output.put_markdown(lang("""### Incapacities (Your Input)""", """Arbeitsunfähigkeiten (Dein Input)### """)).style('margin-top: 20px')
+        output.put_markdown(lang("""### Incapacities (Your Input)""", """### Arbeitsunfähigkeiten (Dein Input)""")).style('margin-top: 20px')
 
         if incapacity_type != False:
 
