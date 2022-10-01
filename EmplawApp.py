@@ -325,7 +325,7 @@ def btn_click(btn_val):
     elif btn_val == "Restart App":
         session.run_js('window.location.reload()')
     elif btn_val == "Feedback":
-        session.run_js('open("mailto:hello@piccolaw.ch/")')
+        session.run_js('open("mailto:hello@piccolaw.ch")')
 
 
 # --- MAIN FNCTION --- #
