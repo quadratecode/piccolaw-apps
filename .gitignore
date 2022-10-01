@@ -142,3 +142,6 @@ cython_debug/
 testfile.py
 /vscode
 .vscode
+
+# Temp
+DeadlineCalc.py

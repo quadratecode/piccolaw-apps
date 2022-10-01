@@ -13,8 +13,8 @@ from pyecharts.components import Table
 # §§
 
 # Custom config
-config(title="Employment Termination Calculator | Kündigungsrechner",
-      description="Automatically calculate embargo periods, sick pay and notice periods according to Swiss law. | Eine Webapplikation zur automatischen Berechnung von Kündigungs-, Sperr- und Lohnfortzahlungsfristen nach Schweizer Recht.",
+config(title="Web App Arbeitsrecht | Web App Employment Law",
+      description="Berechne Kündigungs-, Sperr- und Lohnfortzahlungsfristen | Calculate embargo, sick pay and notice periods",
       css_file = "https://www.piccolaw.ch/pl_apps.css", # adjust for personal CSS
       theme = "default") 
 
@@ -27,14 +27,6 @@ def lang(eng, german):
         return german
     else:
         return eng
-
-# Funtion to validate tc checkbox
-def check_tc(data):
-    if not lang("I accept the terms and conditions", "Ich akzeptiere die Nutzungsbedingungen") in data:
-        output.put_error(lang("ERROR: Terms of service not yet accepted", "ERROR: Nutzungsbedingungen noch nicht akzeptiert"),
-                            closable=True,
-                            scope="scope_input_instructions")
-        return ("", "")
 
 # Validate employment form
 def check_form_employment(data):
@@ -410,21 +402,20 @@ def emplaw_app():
             ### Terms and Conditions
 
             This app is provided as is. Use at your own risk. Warranties or liabilities of any kind are excluded to the extent permitted by applicable law. Do not rely solely on the automatically generated evaluation.
-            
-            Usage is free of charge. No personal data is saved.
+
+            By continuing you agree to these terms.
             ""","""
             ### Nutzungsbedingungen
 
             Diese App wird im Ist-Zustand und kostenlos zur Verfügung gestellt. Die Nutzung erfolgt auf eigene Gefahr und unter Ausschluss jeglicher Haftung, soweit gesetzlich zulässig. Verlassen Sie sich nicht ausschliesslich auf das automatisch generierte Ergebnis.
             
-            Die Nutzung dieser App ist kostenlos. Es werden keine persönlichen Daten gespeichert.
+            Durch weitere Nutzung dieser App stimmst du diesen Nutzungsbedingungen zu.
             """))
     
     # Terms and conditions
-    input.checkbox(
-        options=[
-            lang("I accept the terms and conditions", "Ich akzeptiere die Nutzungsbedingungen")],
-        validate=check_tc)
+    input.actions(lang("Agree and continue?", "Zustimmen und fortfahren?"), [
+        {'label': "Okay!", 'value': 'continue'},
+    ])
 
     with output.use_scope("scope_progress"):
         output.put_processbar("bar", init=0, scope="scope_progress", position=0).style('margin-top: 30px')
