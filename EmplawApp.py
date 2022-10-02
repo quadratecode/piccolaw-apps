@@ -288,7 +288,9 @@ def holiday_checker(day, workplace):
         # Mariä Himmelfahrt
         or day == (arrow.Arrow(day.year, 8, 15) and workplace in ["LU", "UR", "SZ", "OW", "NW", "ZG", "FR", "SO", "AI", "AG", "TI", "VS", "JU"])
         # Jeûne genevois
-        or (day == arrow.Arrow(day.year, 9, 1).shift(weekday=6).shift(weekday=4) and workplace in ["GE"])
+        or (day == arrow.Arrow(day.year, 9, 1).shift(weekday=6).shift(weekday=3) and workplace in ["GE"])
+        # Lundi du Jeûne (does not yet work)
+        or day == (arrow.Arrow(day.year, 9, 1).shift(weekday=6).shift(days=+7).shift(days=+8) and workplace in ["VD"])
         # Mauritiustag
         or (day == arrow.Arrow(day.year, 9, 25) and workplace in ["AI"])
         # Bruderklausenfest
@@ -337,19 +339,18 @@ def emplaw_app():
 
     # --- INPUT --- #
 
-    pin.put_actions
-
     output.put_buttons(
         ["< Back to piccolaw.ch", "Restart App", "Feedback"],
         small=True,
         onclick=btn_click)
+        
     output.put_markdown(lang("""
         # Web App Employment Law
-        `v1.2.0-beta.3 | Last update: 2022-09-28`
+        `v1.2.1-beta.3 | Updated: 2022-09-28`
         """,
         """
         # Web App Arbeitsrecht
-        `v1.2.0-beta.3 | Last update: 2022-09-28`
+        `v1.2.1-beta.3 | Updated: 2022-09-28`
         """))
 
     # User info: Landing page
