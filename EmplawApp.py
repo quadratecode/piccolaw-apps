@@ -289,7 +289,7 @@ def holiday_checker(day, workplace):
         or day == (arrow.Arrow(day.year, 8, 15) and workplace in ["LU", "UR", "SZ", "OW", "NW", "ZG", "FR", "SO", "AI", "AG", "TI", "VS", "JU"])
         # Jeûne genevois
         or (day == arrow.Arrow(day.year, 9, 1).shift(weekday=6).shift(weekday=3) and workplace in ["GE"])
-        # Lundi du Jeûne (does not yet work)
+        # Lundi du Jeûne
         or day == (arrow.Arrow(day.year, 9, 1).shift(weekday=6).shift(days=+7).shift(days=+8) and workplace in ["VD"])
         # Mauritiustag
         or (day == arrow.Arrow(day.year, 9, 25) and workplace in ["AI"])
