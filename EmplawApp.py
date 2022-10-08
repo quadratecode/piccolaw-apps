@@ -408,9 +408,9 @@ def emplaw_app():
             ""","""
             ### Nutzungsbedingungen
 
-            Diese App wird im Ist-Zustand und kostenlos zur Verfügung gestellt. Die Nutzung erfolgt auf eigene Gefahr und unter Ausschluss jeglicher Haftung, soweit gesetzlich zulässig. Verlassen Sie sich nicht ausschliesslich auf das automatisch generierte Ergebnis.
+            Diese App wird im Ist-Zustand zur Verfügung gestellt. Die Nutzung erfolgt auf eigene Gefahr und unter Ausschluss jeglicher Haftung, soweit gesetzlich zulässig. Verlasse dich nicht ausschliesslich auf das automatisch generierte Ergebnis.
             
-            Durch weitere Nutzung dieser App stimmst du diesen Nutzungsbedingungen zu.
+            Durch die weitere Nutzung dieser App stimmst du diesen Nutzungsbedingungen zu.
             """))
     
     # Terms and conditions
@@ -1699,7 +1699,7 @@ def emplaw_app():
 
         if (termination_occurence == False) and (trial_relevance == False):
             output.put_row([
-                output.put_markdown(lang("""**[--> See below for detailed results.]**""", """**[--> Siehe detaillierte Auflistung unten.]**""")),
+                output.put_markdown(lang("""**[--> See below for detailed results.]**""", """**[--> Siehe detaillierte Auflistung unten]**""")),
             ])
 
     # Start of detailed results
