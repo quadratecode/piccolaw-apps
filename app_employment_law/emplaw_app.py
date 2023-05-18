@@ -365,7 +365,10 @@ def holiday_checker(day, workplace):
             and workplace in cantons_holidays["easter_monday"]
         )
         # Fahrtsfest
-        or (day == arrow.Arrow(day.year, 4, 1).shift(weekday=4) and workplace in cantons_holidays["fahrtsfest"])
+        or (
+            day == arrow.Arrow(day.year, 4, 1).shift(weekday=4)
+            and workplace in cantons_holidays["fahrtsfest"]
+        )
         # Tag der Arbeit
         or (
             day == arrow.Arrow(day.year, 5, 1)
@@ -379,125 +382,62 @@ def holiday_checker(day, workplace):
         # Pfingstmontag
         or (
             day == easter_dt.shift(days=+50)
-            and workplace
-            in [
-                "ZH",
-                "BE",
-                "LU",
-                "UR",
-                "SZ",
-                "OW",
-                "NW",
-                "GL",
-                "ZG",
-                "FR",
-                "SO",
-                "BS",
-                "BL",
-                "SH",
-                "AR",
-                "AI",
-                "SG",
-                "GR",
-                "AG",
-                "TG",
-                "TI",
-                "VD",
-                "VS",
-                "GE",
-                "JU",
-            ]
+            and workplace in cantons_holidays["pentecost_monday"]
         )
         # Frohnleichnam
         or (
             day == easter_dt.shift(days=+60)
-            and workplace
-            in [
-                "LU",
-                "UR",
-                "SZ",
-                "OW",
-                "NW",
-                "ZG",
-                "FR",
-                "SO",
-                "AI",
-                "AG",
-                "TI",
-                "VS",
-                "NE",
-                "JU",
-            ]
+            and workplace in cantons_holidays["frohnleichnahm"]
         )
         # Commémoration du plébiscite jurassien
-        or (day == arrow.Arrow(day.year, 6, 23) and workplace in ["JU"])
+        or (
+            day == arrow.Arrow(day.year, 6, 23)
+            and workplace in cantons_holidays["comm_jura"]
+        )
         # Peter und Paul
-        or (day == arrow.Arrow(day.year, 6, 29) and workplace in ["TI"])
+        or (
+            day == arrow.Arrow(day.year, 6, 29)
+            and workplace in cantons_holidays["peter_paul"]
+        )
         # Bundesfeier (all cantons)
         or (day == arrow.Arrow(day.year, 8, 1))
         # Mariä Himmelfahrt
         or day
         == (
             arrow.Arrow(day.year, 8, 15)
-            and workplace
-            in [
-                "LU",
-                "UR",
-                "SZ",
-                "OW",
-                "NW",
-                "ZG",
-                "FR",
-                "SO",
-                "AI",
-                "AG",
-                "TI",
-                "VS",
-                "JU",
-            ]
+            and workplace in cantons_holidays["maria_himmelfahrt"]
         )
         # Jeûne genevois
         or (
             day == arrow.Arrow(day.year, 9, 1).shift(weekday=6).shift(weekday=3)
-            and workplace in ["GE"]
+            and workplace in cantons_holidays["jeune_genevois"]
         )
         # Lundi du Jeûne
         or day
         == (
             arrow.Arrow(day.year, 9, 1).shift(weekday=6).shift(days=+7).shift(days=+8)
-            and workplace in ["VD"]
+            and workplace in cantons_holidays["lundi_jeune"]
         )
         # Mauritiustag
-        or (day == arrow.Arrow(day.year, 9, 25) and workplace in ["AI"])
+        or (
+            day == arrow.Arrow(day.year, 9, 25)
+            and workplace in cantons_holidays["mauritiustag"]
+        )
         # Bruderklausenfest
-        or (day == arrow.Arrow(day.year, 9, 25) and workplace in ["OW"])
+        or (
+            day == arrow.Arrow(day.year, 9, 25)
+            and workplace in cantons_holidays["bruderklausenfest"]
+        )
         # Allerheiligen
         or (
             day == arrow.Arrow(day.year, 11, 1)
-            and workplace
-            in [
-                "LU",
-                "UR",
-                "SZ",
-                "OW",
-                "NW",
-                "GL",
-                "ZG",
-                "FR",
-                "SO",
-                "AI",
-                "SG",
-                "AG",
-                "TI",
-                "VS",
-                "JU",
-            ]
+            and workplace in cantons_holidays["allerheiligen"]
         )
         # Mariä Empfängnis
         or (
             day == arrow.Arrow(day.year, 12, 8)
             and workplace
-            in ["LU", "UR", "SZ", "OW", "NW", "ZG", "FR", "AI", "AG", "TI", "VS"]
+            in cantons_holidays["maria_conception"]
         )
         # Weihnachtstag (all cantons)
         or (day == arrow.Arrow(day.year, 12, 25))
@@ -505,33 +445,10 @@ def holiday_checker(day, workplace):
         or (
             day == arrow.Arrow(day.year, 12, 26)
             and workplace
-            in [
-                "ZH",
-                "BE",
-                "LU",
-                "UR",
-                "SZ",
-                "OW",
-                "NW",
-                "GL",
-                "ZG",
-                "FR",
-                "BS",
-                "BL",
-                "SH",
-                "AR",
-                "AI",
-                "SG",
-                "GR",
-                "AG",
-                "TG",
-                "TI",
-                "VS",
-                "NE",
-            ]
+            in cantons_holidays["stephanstag"]
         )
         # Restauration de la République
-        or (day == arrow.Arrow(day.year, 12, 31) and workplace in ["GE"])
+        or (day == arrow.Arrow(day.year, 12, 31) and workplace in cantons_holidays["restauration_republic"])
     ):
         return True
     else:

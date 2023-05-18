@@ -9,3 +9,18 @@ easter_monday: ["ZH", "BE", "LU", "UR", "SZ", "OW", "NW", "GL", "ZG", "FR", "SO"
 fahrtsfest: ["GL"]
 labour_day: ["ZH", "BS", "BL", "SH", "AG", "TG", "TI", "NE", "JU"]
 ascencions: ["ZH", "BE", "LU", "UR", "SZ", "OW", "NW", "GL", "ZG", "FR", "SO", "BS", "BL", "SH", "AR", "AI", "SG", "GR", "AG", "TG", "TI", "VD", "VS", "NE", "GE", "JU"]
+pentecost_monday: ["ZH", "BE", "LU", "UR", "SZ", "OW", "NW", "GL", "ZG", "FR", "SO", "BS", "BL", "SH", "AR", "AI", "SG", "GR", "AG", "TG", "TI", "VD", "VS", "GE", "JU"]
+frohnleichnahm: ["LU", "UR", "SZ", "OW", "NW", "ZG", "FR", "SO", "AI", "AG", "TI", "VS", "NE","JU"]
+comm_jura: ["JU"]
+peter_paul: ["TI"]
+# Bundesfeier not named, all cantons
+maria_himmelfahrt: ["LU", "UR", "SZ", "OW", "NW", "ZG", "FR", "SO", "AI", "AG", "TI", "VS", "JU"]
+jeune_genevois: ["GE"]
+lundi_jeune: ["VD"]
+mauritiustag: ["AI"]
+bruderklausenfest: ["OW"]
+allerheiligen: ["LU", "UR", "SZ", "OW", "NW", "GL", "ZG", "FR", "SO", "AI", "SG", "AG", "TI", "VS", "JU"]
+maria_conception: ["LU", "UR", "SZ", "OW", "NW", "ZG", "FR", "AI", "AG", "TI", "VS"]
+# Weihnachten not named, all cantons
+stephanstag: ["ZH", "BE", "LU", "UR", "SZ", "OW", "NW", "GL", "ZG", "FR", "BS", "BL", "SH", "AR", "AI", "SG", "GR", "AG", "TG", "TI", "VS", "NE"]
+restauration_rebpulic: ["GE"]
