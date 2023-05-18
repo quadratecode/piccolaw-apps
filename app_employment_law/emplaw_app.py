@@ -436,19 +436,20 @@ def holiday_checker(day, workplace):
         # Mariä Empfängnis
         or (
             day == arrow.Arrow(day.year, 12, 8)
-            and workplace
-            in cantons_holidays["maria_conception"]
+            and workplace in cantons_holidays["maria_conception"]
         )
         # Weihnachtstag (all cantons)
         or (day == arrow.Arrow(day.year, 12, 25))
         # Stephanstag
         or (
             day == arrow.Arrow(day.year, 12, 26)
-            and workplace
-            in cantons_holidays["stephanstag"]
+            and workplace in cantons_holidays["stephanstag"]
         )
         # Restauration de la République
-        or (day == arrow.Arrow(day.year, 12, 31) and workplace in cantons_holidays["restauration_republic"])
+        or (
+            day == arrow.Arrow(day.year, 12, 31)
+            and workplace in cantons_holidays["restauration_republic"]
+        )
     ):
         return True
     else:
