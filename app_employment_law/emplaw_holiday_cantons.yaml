@@ -1,0 +1,11 @@
+# Source: https://www.bj.admin.ch/dam/bj/de/data/publiservice/service/zivilprozessrecht/kant-feiertage.pdf
+all_cantons_code: ["AG", "AI", "AR", "BS", "BL", "BE", "FR", "GE", "GL", "GR", "JU", "LU", "NE", "NW", "OW", "SH","SZ", "SO", "SG", "TG", "TI", "UR", "VS", "VD", "ZG", "ZH"]
+berchtoldstag: ["ZH", "BE", "LU", "OW", "NW", "GL", "ZG", "FR", "SO", "SH", "SG", "AG","TG", "VD", "VS", "NE", "JU"]
+three_kings: ["UR", "SZ", "TI"]
+republic_neuenburg: ["NE"]
+josefstag: ["UR", "SZ", "NW", "SO", "TI", "VS"]
+karfreitag: ["ZH", "BE", "LU", "UR","SZ", "OW", "NW", "GL", "ZG", "FR", "SO", "BS", "BL", "SH", "AR", "AI", "SG", "GR", "AG", "TG", "VD","NE", "GE", "JU"]
+easter_monday: ["ZH", "BE", "LU", "UR", "SZ", "OW", "NW", "GL", "ZG", "FR", "SO", "BS", "BL", "SH", "AR", "AI", "SG", "GR", "AG", "TG", "TI", "VD", "VS", "GE", "JU"]
+fahrtsfest: ["GL"]
+labour_day: ["ZH", "BS", "BL", "SH", "AG", "TG", "TI", "NE", "JU"]
+ascencions: ["ZH", "BE", "LU", "UR", "SZ", "OW", "NW", "GL", "ZG", "FR", "SO", "BS", "BL", "SH", "AR", "AI", "SG", "GR", "AG", "TG", "TI", "VD", "VS", "NE", "GE", "JU"]

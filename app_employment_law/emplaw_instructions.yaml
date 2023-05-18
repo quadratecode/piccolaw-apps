@@ -1,0 +1,219 @@
+technical_info:
+  EN: |
+    Possible evaluations:
+    - Trial period extensions
+    - Notice periods
+    - Embargo periods
+    - Sick pay claim
+    - Validity of termination
+    ----
+    - Screenwidth >1080p recommended, JavaScript required
+    - Language is set according to your browser settings (DE/EN)
+    - Source on [GitHub](https://github.com/quadratecode/pl-emplaw-app)
+  DE: |
+    Mögliche Berechnungen:
+    - Verlängerung der Probezeit
+    - Kündigungsfristen
+    - Sperrfristen
+    - Anspruch auf Lohnfortzahlung
+    - Gültigkeit Kündigung
+    ----
+    - Bildschrimvertikale > 1080p empfohlen, JavaScript erforderlich
+    - Die Sprache richtet sich nach den Browsereinstellungen (DE/EN)
+    - Quellcode auf [GitHub](https://github.com/quadratecode/pl-emplaw-app)
+
+legal_framework:
+  EN: |
+    <ul>
+      <li> Probation period: <a target="_blank" rel="noopener noreferrer" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/en#art_335_b">Art. 335b OR</a> </li>
+      <li> Regular termination: <a target="_blank" rel="noopener noreferrer" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/en#art_335_c">Art. 335c OR</a> </li>
+      <li> Embargo period: <a target="_blank" rel="noopener noreferrer" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/en#art_336_c">Art. 336c OR</a> </li>
+      <li> Sick pay: <a target="_blank" rel="noopener noreferrer" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/en#art_324_a">Art. 324a OR</a> </li>
+      <li> Federal document on legally mandated holidays: <a target="_blank" rel="noopener noreferrer" href="https://www.bj.admin.ch/dam/bj/de/data/publiservice/service/zivilprozessrecht/kant-feiertage.pdf">Link to PDF</a> </li>
+    </ul>
+  DE: |
+    <ul>
+      <li> Probezeit: <a target="_blank" rel="noopener noreferrer" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_335_b">Art. 335b OR</a> </li>
+      <li> Ordentliche Kündigung: <a target="_blank" rel="noopener noreferrer" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_335_c">Art. 335c OR</a> </li>
+      <li> Sperrfristen: <a target="_blank" rel="noopener noreferrer" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_336_c">Art. 336c OR</a> </li>
+      <li> Lohnfortzahlung: <a target="_blank" rel="noopener noreferrer" href="https://www.fedlex.admin.ch/eli/cc/27/317_321_377/de#art_324_a">Art. 324a OR</a> </li>
+      <li> Dokument des Bundes über die gesetzlichen Feiertage: <a target="_blank" rel="noopener noreferrer" href="https://www.bj.admin.ch/dam/bj/de/data/publiservice/service/zivilprozessrecht/kant-feiertage.pdf">Link to PDF</a> </li>
+    </ul>
+
+terms_and_conditions:
+  EN: |
+    ### Terms and Conditions
+
+    This app is provided as is. Use at your own risk. Warranties or liabilities of any kind are excluded to the extent permitted by applicable law. Do not rely solely on the automatically generated evaluation.
+
+    By continuing you agree to these terms.
+  DE: |
+    ### Nutzungsbedingungen
+
+    Diese App wird im Ist-Zustand zur Verfügung gestellt. Die Nutzung erfolgt auf eigene Gefahr und unter Ausschluss jeglicher Haftung, soweit gesetzlich zulässig. Verlasse dich nicht ausschliesslich auf das automatisch generierte Ergebnis.
+    
+    Durch die weitere Nutzung dieser App stimmst du diesen Nutzungsbedingungen zu.
+
+general_employment_data:
+  EN: |
+    ### Employment
+
+    Please enter the date of the first day of work and the place of work.
+
+    Notes:
+    - The first day of work can be different from the starting date of the employment contract.
+    - The first day fully available to the parties counts as first day of work.
+    - Format for all date inputs: DD.MM.YYYY (e.g. 01.01.2020, 16.05.2020, 07.12.2020)
+  DE: |
+    ### Arbeitsverhältnis
+
+    Bitte trage das Datum des Stellenantritts und den Arbeitsort ein.
+
+    Hinweise:
+    - Der Tag des Stellenantritts kann vom Anfangsdatum des Arbeitsvertrags abweichen.
+    - Als Tag des Stellenatritts gilt der vollumfänglich verfügbare, erste Arbeitstag
+    - Format für alle Datumsangaben: DD.MM.YYYY (bspw. 01.01.2020, 16.05.2020, 07.12.2020).
+
+case_combinations:
+  EN: |
+    ### Case Combination
+
+    Please select any case options you would like to evaluate.
+
+    Notes:
+    - Performing an evaluation of the trial period is especially advised whenever an incapacity occured during the probation period.
+    - The evaluation of a termination is especially advised whenever a termination has already been issued.
+  DE: |
+    ### Fallkonstellation
+
+    Bitte wähle eine Fallkonstellation aus.
+
+    Hinweise:
+    - Die Auswertung der Probezeit ist insb. dann sinnvoll, wenn eine Arbeitsunfähigkeit während der Probezeit aufgetreten ist.
+    - Die Auswertung einer Kündigung ist insb. dann sinnvoll, wenn bereits eine Kündigung erfolgt ist.
+
+incapacity_amount:
+  EN: |
+    ### Number of Incapacities
+
+    You have chosen to evaluate an incapacity due to illness(es) or accident(s). Please specify how many **seperate** illnesses or accidents are to be evaluated.
+
+    Notes:
+    - Incapacities to work count as **seperate** if there is **no connection** between them. Example: There is no connection between having the flu and a car accident – these would count as seperate.
+    - Incapacities to work **do not count as seperate** if there is **any connection** between them. For example: A prolonged cancer treatment with multiple periods of absence would count as a single incapacity.
+    - Breaks between individual incapacities can be specified in the next step.
+  DE: |
+    ### Anzahl Arbeitsunfähigkeiten
+
+    Du hast die Auswertung einer Arbeitsunfähigkeit zufolge Krankheit oder Unfall ausgewählt. Bitte spezifiziere, wie viele **unabhängige** Krankheiten oder Unfälle ausgewertet werden sollen.
+
+    Hinweise:
+    - Arbeitsunfähigkeiten gelten als **unabhängig**, wenn zwischen ihnen **keinerlei Verbindung** besteht. Beispiel: Es besteht keine Verbindung zwischen einer Grippeerkrankung und einem Autounfall.
+    - Arbeitsunfähigkeiten gelten **nicht als unabhängig**, wenn zwischen ihnen eine **irgendwie geartete Verbindung** besteht. Beispiel: Eine langandauernde Krebstherapie mit vielzähligen Abwesenheiten zählt als einzelne Arbeitsunfähigkeit.
+    - Unterbrüche zwischen einer einzelnen Arbeitsunfähigkeit können im nächsten Schritt angegeben werden.
+
+probation_period:
+  EN: |
+    ### Probation Period
+
+    Please specify the weekly workdays and the duration of the probation period.
+
+    Notes:
+    - Missed workdays during the probation period can lead to its extension.
+    - This app respects public holidays and weekends. Other reasons for missed workdays during the probation period are not taken into account.
+  DE: |
+    ### Angaben Probezeit
+
+    Bitte spezifiziere die Arbeitstage und die Dauer der Probezeit.
+
+    Hinweise:
+    - Verpasste Arbeitstage können zu einer Verlängerung der Probezeit führen.
+    - Diese App berücksichtigt die Feiertage und Wochenenden im Auswertungszeitraum. Andere Gründe für verpasste Arbeitstage während der Probezeit werden nicht berücksichtigt.
+
+incapacity_illness_accident:
+  EN: |
+    ### Incapacity due to Illness or Accident
+
+    You have chosen the evaluation of one or more incapacities due to illness(es) or accident(s).
+    For each incapacity (illness or accident) you can specify up to three periods of absence.
+
+    Notes:
+    - Enter the periods in chronological order.
+    - At least one period must be entered. Leave unused form fields empty.
+  DE: |
+    ### Arbeitsunfähigkeit zufolge Krankheit oder Unfall
+
+    Du hast die Auswertung einer oder mehreren Arbeitsunfähigkeiten zufolge Krankheit oder Unfall ausgewählt.
+    Für jede dieser Arbeitsunfähigkeiten können bis zu drei Absenzperioden spezifiziert werden.
+
+    Hinweise:
+    - Trage die einzelnen Perioden in chronologischer Reihenfolge ein.
+    - Es muss mindestens eine Periode eingetragen werden. Lasse ungenutzte Formularfelder leer.
+
+incapacity_milservice:
+  EN: |
+    ### Militar or Civil Service - Details
+
+    Please specify on which date the service started and on which it ended.
+  DE: |
+    ### Militär-, Zivil- oder Schutzdienst ###
+
+    Bitte spezifiziere das Start- und Enddatum der Dienstleistung.
+
+incapacity_pregnancy:
+  EN: |
+    ### Pregnancy - Details
+
+    Please specify on which date the pregnancy commenced the date of confinement.
+
+    Notes:
+    - It is assumed that the requirements for maternity pay according to [Art. 16b EOG](https://www.fedlex.admin.ch/eli/cc/1952/1021_1046_1050/de#art_16_d=) are satisfied.
+    - The federal court has decided in BGE 143 III 21 that the pregnancy begins on the day the egg is fertilised.
+    - Any natural termination of the pregnancy counts as confinement, including premature birth or miscarriage, not so abortions.
+  DE: |
+    ### Schwangerschaft - Details
+
+    Bitte spezifiziere das Datum für den Beginn der Schwangerschaft und das Datum der Niederkunft.
+
+    Hinweise:
+    - Es wird agenommen, dass die Voraussetzungen für die Entrichtung einer Mutterschaftsentschädigung nach [Art. 16b EOG](https://www.fedlex.admin.ch/eli/cc/1952/1021_1046_1050/de#art_16_d=) erfüllt sind.
+    - Das Bundesgericht hat in BGE 143 III 21 entschieden, dass die Schwangerschaft mit der Befruchtung der Eizelle beginnt.
+    - Als Niederkunft gilt jede natürliche Befreiung von der Schwangerschaft, d.h. auch Früh- oder Fehlgeburten, nicht aber Schwangerschaftsabbrüche.
+
+termination:
+  EN: |
+    ### Termination (by employer)
+
+    Please specify on which date the termination was (or shall be) received, the duration of the notice period and the projected end date of employment.
+  DE: |
+    ### Kündigung (durch Arbeitgeber)
+
+    Bitte spezifiziere das Datum, an dem die Kündigung dem Arbeitnehmer zuging (oder zugehen soll), ferner die Dauer der Kündigungsfrist und den Kündigungstermin.
+
+probation_period_termination:
+  EN: |
+    ### Probation Period Termination
+
+    You have chosen to evaluate both probation period and termination: Please specify the length of the notice period for the probation period (in days).
+  DE: |
+    ### Kündigung Probezeit
+
+    Du hast die Auswertung von Kündigung und Probezeit ausgewählt: Bitte spezifiziere die Kündigungsfrist für die Probezeit an (in Tagen).
+
+visualization_disclaimer:
+  EN: |
+    ## Interactive Visualization
+
+    IMPORTANT: The chart below is intended only as a visual aid.
+  DE: |
+    ## Interaktive Visualisierung
+
+    WICHTIG: Die nachfolgende Grafik ist nur als visuelle Hilfe gedacht.
+
+visualization_instructions:
+  EN: |
+            - An export of the chart area as PNG is possible via the control panel on the top right
+            - Time periods of asingle day cannot be visualized
+  DE: |
+            - Ein Export als PNG ist über das Steuerpanel rechts oben möglich.
+            - Die Visualisierung einzelner Tage ist nicht möglich
