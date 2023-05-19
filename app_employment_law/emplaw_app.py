@@ -44,6 +44,7 @@ def check_form_employment(data):
         )
 
 
+# Check if any case has been selected
 def check_case_comb(data):
     if (
         (data["incapacity_type"] == False)
@@ -178,7 +179,7 @@ def check_form_termination(data):
 
 
 # Function to correct date subtraction if origin month has more days than target month
-# See issue 1
+# See issue: https://github.com/quadratecode/piccolaw-apps/issues/1
 def subtract_corr(sdt, edt):
     if sdt.day != edt.day:
         return edt
@@ -467,7 +468,7 @@ def clamp(n, minn, maxn):
         return n
 
 
-# Control bar functions
+# Function to enable controls on top of app
 def btn_click(btn_val):
     if btn_val == "< Back to piccolaw.ch":
         session.run_js('window.location = "https://www.piccolaw.ch/"')
@@ -478,6 +479,7 @@ def btn_click(btn_val):
 
 
 # Function to create input fields within a loop to avoid duplicates
+# Avoids code being overly long
 def create_input_fields(num_periods):
     input_fields = []
     for i in range(1, num_periods + 1):
@@ -509,17 +511,17 @@ def create_input_fields(num_periods):
     return input_fields
 
 
-# --- MAIN FNCTION --- #
+# --- MAIN FUNCTION --- #
 def emplaw_app():
-    # Load the instruction blocks
+    # Load the YAML that contains the long-form instruction text
     with open("app_employment_law/emplaw_instructions.yaml", "r") as f:
         instructions = yaml.safe_load(f)
 
-    # Load pay matrix
+    # Load the YAML that contains the pay matrix
     with open("app_employment_law/emplaw_pay_matrix.yaml", "r") as f:
         pay_matrix = yaml.safe_load(f)
 
-    # Cantons
+    # Load the YAML that contains the cantons and the holidays
     with open("app_employment_law/emplaw_holiday_cantons.yaml", "r") as f:
         global cantons_holidays
         cantons_holidays = yaml.safe_load(f)
@@ -534,21 +536,23 @@ def emplaw_app():
 
     # --- INPUT --- #
 
+    # Controls on top of app
     output.put_buttons(
         ["< Back to piccolaw.ch", "Restart App", "Feedback"],
         small=True,
         onclick=btn_click,
     )
 
+    # Release
     output.put_markdown(
         lang(
             """
         # Web App Employment Law
-        `v0.1.0 | Updated: 2022-10-08`
+        `v0.2.0 | Updated: 2023-05-18`
         """,
             """
         # Web App Arbeitsrecht
-        `v0.1.0 | Updated: 2022-10-08`
+        `v0.2.0 | Updated: 2023-05-18`
         """,
         )
     )
@@ -821,7 +825,7 @@ def emplaw_app():
     # Intiate incap dictionary
     incap_dct = {}
 
-    # User info: First illacc (alternate block)
+    # User info: illness or accident (alternate block)
     with output.use_scope("scope_input_instructions", clear=True):
         output.put_markdown(
             lang(
@@ -830,7 +834,7 @@ def emplaw_app():
             )
         )
 
-    # User input: First illacc (alternate block)
+    # User input: First illness (alternate block)
     if illacc_amount in [1, 2, 3]:
         first_illacc_data = input.input_group(
             lang("Incapacity 1", "Arbeitsunfähgkeit 1"),
@@ -841,7 +845,7 @@ def emplaw_app():
         incap_dct[1] = populate_dct(first_illacc_data)
         output.set_processbar("bar", 0.6)
 
-    # User input: Second illacc (block optional)
+    # User input: Second illness (block optional)
     if illacc_amount in [2, 3]:
         second_illacc_data = input.input_group(
             lang("Incapacity 2", "Arbeitsunfähgkeit 2"),
@@ -852,7 +856,7 @@ def emplaw_app():
         incap_dct[2] = populate_dct(second_illacc_data)
         output.set_processbar("bar", 0.8)
 
-    # User input: Third illacc (block optional)
+    # User input: Third illness (block optional)
     if illacc_amount == 3:
         third_illacc_data = input.input_group(
             lang("Incapacity 3", "Arbeitsunfähgkeit 3"),
