@@ -21,6 +21,7 @@ v1.2.0-beta.3
 
 ## Planned
 
+- [ ] Declare service years in table form
 - [ ] Calculate possible reductions in vacation days
 - [ ] Further expand user defined inputs
 - [ ] Further improve layout and explanation of output
