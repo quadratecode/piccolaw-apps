@@ -7,6 +7,7 @@ import pandas as pd
 import copy
 import portion
 from pyecharts.components import Table
+import os
 import yaml
 
 # §§
@@ -513,16 +514,22 @@ def create_input_fields(num_periods):
 
 # --- MAIN FUNCTION --- #
 def emplaw_app():
+
+    # Get the directory that this script is in
+    basedir = os.path.dirname(os.path.abspath(__file__))
+
+
+
     # Load the YAML that contains the long-form instruction text
-    with open("app_employment_law/emplaw_instructions.yaml", "r") as f:
+    with open(os.path.join(basedir, "emplaw_instructions.yaml"), "r") as f:
         instructions = yaml.safe_load(f)
 
     # Load the YAML that contains the pay matrix
-    with open("app_employment_law/emplaw_pay_matrix.yaml", "r") as f:
+    with open(os.path.join(basedir, "emplaw_pay_matrix.yaml"), "r") as f:
         pay_matrix = yaml.safe_load(f)
 
     # Load the YAML that contains the cantons and the holidays
-    with open("app_employment_law/emplaw_holiday_cantons.yaml", "r") as f:
+    with open(os.path.join(basedir, "emplaw_holiday_cantons.yaml"), "r") as f:
         global cantons_holidays
         cantons_holidays = yaml.safe_load(f)
 
@@ -991,18 +998,7 @@ def emplaw_app():
                             "No mention of notice period",
                             "Keine Angaben zur Kündigungsfrist",
                         ),
-                        "1",
-                        "2",
-                        "3",
-                        "4",
-                        "5",
-                        "6",
-                        "7",
-                        "8",
-                        "9",
-                        "10",
-                        "11",
-                        "12",
+                        +[str(i) for i in range(1, 13)],
                     ],
                     name="notice_period_input",
                     type=input.TEXT,
@@ -1073,37 +1069,7 @@ def emplaw_app():
                             "Not specified in contract",
                             "Keine Angaben im Arbeitsvertrag",
                         ),
-                        "0",
-                        "1",
-                        "2",
-                        "3",
-                        "4",
-                        "5",
-                        "6",
-                        "7",
-                        "8",
-                        "9",
-                        "10",
-                        "11",
-                        "12",
-                        "13",
-                        "14",
-                        "15",
-                        "16",
-                        "17",
-                        "18",
-                        "19",
-                        "20",
-                        "21",
-                        "22",
-                        "23",
-                        "24",
-                        "25",
-                        "26",
-                        "27",
-                        "28",
-                        "29",
-                        "30",
+                        +[str(i) for i in range(1, 31)],
                     ],
                     name="trial_notice_input",
                     type=input.TEXT,
