@@ -22,6 +22,9 @@ python3 appstart.py
 ```
 Follow the link in the terminal to get to the apps.
 
+## Docker
+Read the [Docker Readme](README.Docker.md) for more information.
+
 # Contribute
 
 - If your input returns an error or incorrect results, please open an [issue](https://github.com/quadratecode/ch-termination-calc/issues)
